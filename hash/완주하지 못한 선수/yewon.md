@@ -43,10 +43,10 @@ function solution(participant, completion) {
     } //완료한 선수들 제외
     
     for (let k in participantList) {
-      if (participantList[k] !== 0) {
+      if (participantList[k] > 0) {
         answer = k;
       }
-    } //명 수가 0이 아닌 이름 찾기
+    } //명 수가 0보다 큰 이름 찾기
     
     return answer;
 }
