@@ -10,19 +10,18 @@
 
 ```js
 function solution(clothes) {
-    var answer = 1; //나중에 곱하기를 해야하므로 1로 설정
+  var answer = 1; //나중에 곱하기를 해야하므로 1로 설정
   
-  	const groupByClothesType = clothes.reduce((acc, clothes) => {
-      let key = clothes[1];
-      acc[key] ? acc[key] = acc[key] + 1 : acc[key] = 2;
-      //아이템을 안입는 경우가 있으므로 초기 숫자가 2로 셋팅
-      return acc
-    }, {});
-
-  	for (let key in groupByClothesType) {
-      answer *= groupByClothesType[key];
-    } //모든 숫자를 곱해서 경우의 수 구하기
-  
-    return answer - 1; //모두 안입는 경우를 제외
+  const groupByClothesType = clothes.reduce((acc, clothes) => {
+    let key = clothes[1];
+    acc[key] ? acc[key] = acc[key] + 1 : acc[key] = 2; //아이템을 안입는 경우가 있으므로 초기 숫자가 2로 셋팅
+    return acc
+   }, {});
+   
+   for (let key in groupByClothesType) {
+    answer *= groupByClothesType[key];
+   } //모든 숫자를 곱해서 경우의 수 구하기
+   
+  return answer - 1; //모두 안입는 경우를 제외
 }
 ```
