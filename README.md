@@ -2,7 +2,7 @@
 
 프로그래머스 고득점 kit 풀고 공유하기
 
-## 규칙
+## 업로드 규칙
 
 [프로그래머스 코딩테스트 고득점 kit](https://programmers.co.kr/learn/challenges?tab=algorithm_practice_kit) 기준
 

@@ -1,0 +1,52 @@
+# 풀이
+
+1. 소요시간을 담은 새로운 배열
+2. 현재까지 가장 긴 소요시간, 해당 소요 시간동안 완료한 태스크를 담은 변수
+3. 조건에 맞게 스택
+
+# 코드
+
+```js
+function solution(progresses, speeds) {
+  let answer = [];
+
+  const takenDays = progresses.map((progress, index) => {
+    let x = progress;
+    let y = 0;
+
+    while (x < 100) {
+      x += speeds[index];
+      y++;
+    }
+
+    return y;
+  });
+
+  let z = takenDays[0];
+  let k = 0;
+
+  for (let i = 0; i < takenDays.length; i++) {
+    if (takenDays[i] > z && i !== 0) {
+      answer.push(k);
+      k = 1;
+      z = takenDays[i];
+      if (takenDays[i + 1] === undefined) answer.push(1);
+    } else {
+      k++;
+      if (takenDays[i + 1] === undefined) answer.push(k);
+    }
+  }
+
+  return answer;
+}
+
+// const progresses = [93, 30, 55];
+// const speeds = [1, 30, 5];
+// [2, 1]
+
+const progresses = [95, 90, 99, 99, 80, 99];
+const speeds = [1, 1, 1, 1, 1, 1];
+// [1, 3, 2]
+
+console.log(solution(progresses, speeds));
+```
