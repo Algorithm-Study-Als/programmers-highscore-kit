@@ -50,3 +50,32 @@ const speeds = [1, 1, 1, 1, 1, 1];
 
 console.log(solution(progresses, speeds));
 ```
+
+# 다른 사람의 방식
+
+## 얻을 것
+
+- 소요 시간을 담은 새로운 배열을 만든 방식을 Math 메소드로도 구현할 수 있음
+-
+
+```js
+function solution(progresses, speeds) {
+  let answer = [0];
+  let days = progresses.map((progress, index) =>
+    Math.ceil((100 - progress) / speeds[index])
+  );
+  console.log(days);
+  let maxDay = days[0];
+
+  for (let i = 0, j = 0; i < days.length; i++) {
+    if (days[i] <= maxDay) {
+      answer[j] += 1;
+    } else {
+      maxDay = days[i];
+      answer[++j] = 1;
+    }
+  }
+
+  return answer;
+}
+```
