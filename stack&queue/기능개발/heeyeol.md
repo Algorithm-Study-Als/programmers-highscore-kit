@@ -56,7 +56,7 @@ console.log(solution(progresses, speeds));
 ## 얻을 것
 
 - 소요 시간을 담은 새로운 배열을 만든 방식을 Math 메소드로도 구현할 수 있음
--
+- for문 내에 변수를 i, j 두개 담아서 활용할 수 있음 (더 심플)
 
 ```js
 function solution(progresses, speeds) {
