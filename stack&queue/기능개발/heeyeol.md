@@ -22,18 +22,18 @@ function solution(progresses, speeds) {
     return y;
   });
 
-  let z = takenDays[0];
-  let k = 0;
+  let max = takenDays[0];
+  let tasks = 0;
 
   for (let i = 0; i < takenDays.length; i++) {
-    if (takenDays[i] > z && i !== 0) {
-      answer.push(k);
-      k = 1;
-      z = takenDays[i];
+    if (takenDays[i] > max && i !== 0) {
+      answer.push(tasks);
+      tasks = 1;
+      max = takenDays[i];
       if (takenDays[i + 1] === undefined) answer.push(1);
     } else {
-      k++;
-      if (takenDays[i + 1] === undefined) answer.push(k);
+      tasks++;
+      if (takenDays[i + 1] === undefined) answer.push(tasks);
     }
   }
 
