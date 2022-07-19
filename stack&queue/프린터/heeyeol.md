@@ -15,19 +15,10 @@ function solution(priorities, location) {
       const hasBiggerPriority = newDocuments.some(
         (document) => document.priority > shiftedDocument.priority
       );
-      const hasSamePriority = newDocuments.some(
-        (document) => document.priority === shiftedDocument.priority
-      );
 
       if (hasBiggerPriority) {
         newDocuments.push(shiftedDocument);
-      }
-
-      if (!hasBiggerPriority && !hasSamePriority) {
-        sortedDocuments.push(shiftedDocument);
-      }
-
-      if (!hasBiggerPriority && hasSamePriority) {
+      } else {
         sortedDocuments.push(shiftedDocument);
       }
 
