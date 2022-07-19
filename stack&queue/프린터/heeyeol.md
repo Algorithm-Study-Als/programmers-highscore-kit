@@ -9,14 +9,14 @@ function solution(priorities, location) {
   let isEmpty = false;
 
   while (!isEmpty) {
-    for (let i = 0; i < documents.length; i++) {
+    for (let i = 0; i < newDocuments.length; i++) {
       const shiftedDocument = newDocuments.shift();
 
       const hasBiggerPriority = newDocuments.some(
-        (newDocument) => newDocument.priority > shiftedDocument.priority
+        (document) => document.priority > shiftedDocument.priority
       );
       const hasSamePriority = newDocuments.some(
-        (newDocument) => newDocument.priority === shiftedDocument.priority
+        (document) => document.priority === shiftedDocument.priority
       );
 
       if (hasBiggerPriority) {
