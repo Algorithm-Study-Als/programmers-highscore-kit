@@ -4,25 +4,24 @@ function solution(priorities, location) {
     return { priority: priority, location: index };
   });
 
-  let newDocuments = [...documents];
   let sortedDocuments = [];
   let isEmpty = false;
 
   while (!isEmpty) {
-    for (let i = 0; i < newDocuments.length; i++) {
-      const shiftedDocument = newDocuments.shift();
+    for (let i = 0; i < documents.length; i++) {
+      const shiftedDocument = documents.shift();
 
-      const hasBiggerPriority = newDocuments.some(
+      const hasBiggerPriority = documents.some(
         (document) => document.priority > shiftedDocument.priority
       );
 
       if (hasBiggerPriority) {
-        newDocuments.push(shiftedDocument);
+        documents.push(shiftedDocument);
       } else {
         sortedDocuments.push(shiftedDocument);
       }
 
-      if (newDocuments.length === 0) {
+      if (documents.length === 0) {
         isEmpty = true;
         break;
       }
