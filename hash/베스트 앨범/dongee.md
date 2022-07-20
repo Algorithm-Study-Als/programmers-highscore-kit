@@ -9,4 +9,25 @@
 
 # 코드
 
-`js `
+```jsx
+function solution(genres, plays) {
+  const genreList = [...new Set(genres)];
+
+  const infoList = genres.map((genre, i) => {
+    return {
+      id: i,
+      genre: genre,
+      play: plays[i],
+    };
+  });
+  // console.log(infoList)
+
+  const groupBy = groupByKey(infoList, "genre");
+  console.log(groupBy);
+
+  genreList.map((genre) => {
+    //  const groupBy[genre].sort((a,b)=>a.play-b.play)
+    console.log(groupBy[genre]);
+  });
+}
+```
