@@ -10,7 +10,7 @@
 - 처음에 최대 priority를 설정 해놓고 for 문을 써서 해결 해보려고 시도했지만 실패했다.
 - while 문 안에서 shift, push를 사용하고, 매 iteration 마다 새로 max를 구해주면 된다는게 핵심 
 
-# 효율성 실패 코드 (내 코드)
+# 
 
 ```js
 function solution(priorities, location) {
