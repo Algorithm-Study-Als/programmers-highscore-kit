@@ -32,12 +32,12 @@ function solution(s) {
 
 ```js
 function solution(s) {
-	let opened = 0;
+  let opened = 0;
   for (let i = 0; i < s.length; i++) {
-		if (s[i] === "(") opened += 1;
-		if (s[i] === ")") opened -= 1;
-		if (opened < 0) return false;
-	}
-	return opened === 0;
+    if (s[i] === "(") opened += 1;
+    if (s[i] === ")") opened -= 1;
+    if (opened < 0) return false;
+  }
+  return opened === 0;
 }
 ```
