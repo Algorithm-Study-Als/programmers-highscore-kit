@@ -21,7 +21,8 @@ function solution(priorities, location) {
     
   while (prioritiesWithIndex.length) {
     const first = prioritiesWithIndex.shift();
-    const max = Math.max(...prioritiesWithIndex.map(x => x[0]))
+    const max = Math.max(...prioritiesWithIndex.map(x => x[0]));
+    
   	if (first[0] >= max) {
       answer.push(first);
       if (first[1] === location) break;
