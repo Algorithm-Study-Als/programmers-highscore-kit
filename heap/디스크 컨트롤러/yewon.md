@@ -8,7 +8,7 @@
 - totalTime 이 jobs 의 요청 시점과 같거나 크면, 실행 될 수 있는 작업이므로, jobsAvailable에 푸시
 - 작업 총 시간을 계산해주고 shift
 - jobsAvailable이 빈 배열일때 맨 처음에 있는 작업의 요청시점을 totalTime으로 할당 (이부분을 생각 못 했다)
-
+ 
 
 # 틀린 코드
 ```js
