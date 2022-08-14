@@ -9,21 +9,21 @@
 
 ```js
 function solution(citations) {
-	var answer = 0;
-	function filterNumberOfCitations(number) {
-		return citations.filter((citation) => citation >= number).length;
-	}
+  var answer = 0;
+  function filterNumberOfCitations(number) {
+    return citations.filter((citation) => citation >= number).length;
+  }
 
-	let h = 0;
-	let length = 0;
-	while (h <= length) {
-		h++;
-		length = filterNumberOfCitations(h);
-	}
-	answer = h - 1;
+  let h = 0;
+  let length = 0;
+  while (h <= length) {
+    h++;
+    length = filterNumberOfCitations(h);
+  }
+  answer = h - 1;
 
-	return answer;
+  return answer;
 }
 
-solution ([1, 3, 5, 7, 9, 11]); //4 
+solution([1, 3, 5, 7, 9, 11]); //4
 ```
