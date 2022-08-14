@@ -9,15 +9,14 @@ function solution(numbers) {
   var answer = '';
   let string = numbers.map((number) => number + '');
 
-  string.sort((a,b) => return (b + a) - (a + b));
+  string.sort((a, b) => b + a - (a + b));
 
-  if (string.every(item => item === '0')) return '0';
+  if (string.every((item) => item === '0')) return '0';
 
   string.forEach((item) => {
     answer += item;
-  })
-
-	return answer;
+  });
+  return answer;
 }
 
 ```
