@@ -25,5 +25,5 @@ function solution(citations) {
 	return answer;
 }
 
-solution ([1, 3, 5, 7, 9, 11]); //4
+solution ([1, 3, 5, 7, 9, 11]); //4 
 ```
