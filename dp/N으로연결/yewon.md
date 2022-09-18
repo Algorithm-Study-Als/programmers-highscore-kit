@@ -3,7 +3,7 @@
 ## Dynamic Programming
 
 다이내믹 프로그래밍은 쉽게 말해 반복적인 계산을 줄여서 알고리즘을 더 효율적으로 만드는 문제 해결 방식을 말한다.
-보통 recursion, memorization, bottom-up 등을 이용해 해결한다.
+보통 recursion, memoization, bottom-up 등을 이용해 해결한다.
 
 ### 다이나믹 프로그래밍을 사용할 수 있는 문제의 조건
 
