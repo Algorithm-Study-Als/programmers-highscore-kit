@@ -33,7 +33,7 @@ function solution(N, number) {
   for (let i = 1; i < 9; i++) {
     for (let j = 1; j < i; j++) {
       for (let x of list[j]) {
-        for (let y of list[i - j]) {
+        for (let y of list[i - j]) { // i의 횟수만큼 N을 사용하는 경우를 구하므로, j와 i-j의 요소들을 사용 (j + (i-j) = i)
           const calc = ([a, b, c, d] = [x + y, x - y, x * y, x / y]);
           for (component of calc) list[i].add(component);
           if (a === number) return i;
