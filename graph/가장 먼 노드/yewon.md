@@ -1,14 +1,14 @@
 ```js
 function solution(n, edge) {
-  let node = new Array(n + 1).fill([]);
+  let node = Array.from({length: n+1}, ()=> []);
   let queue = [1];
   let check = new Array(n + 1).fill(0);
-  
+
   edge.forEach((x) => {
     node[x[0]].push(x[1]);
     node[x[1]].push(x[0]);
   });
-
+  
   check[1] = 1;
 
   while (queue.length !== 0) {
